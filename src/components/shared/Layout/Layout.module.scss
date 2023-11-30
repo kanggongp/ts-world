@@ -1,0 +1,76 @@
+.container {
+  height: calc(var(--vh, 1vh) * 100);
+
+  &.noNav {
+    @include flex(column, flex-start, center);
+  }
+}
+
+.main {
+  position: relative;
+  max-width: 1600px;
+  height: 100%;
+  min-height: calc(100dvh - $layout-footer-height - $layout-header-height);
+  margin-left: calc($layout-menu-nav-width + $layout-community-nav-width);
+
+  &.noNav {
+    margin-left: 0;
+  }
+
+  &.header {
+    padding-top: 32px;
+  }
+
+  &.full {
+    position: fixed;
+    top: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  @include responsive(desktopMd) {
+    margin-left: $layout-community-nav-width;
+  }
+
+  @include responsive(bigMobile) {
+    margin-left: 0;
+
+    &.header {
+      padding-top: 0;
+    }
+  }
+
+  @include responsive(mobile) {
+    width: 100vw;
+    min-height: calc(
+      100dvh - $layout-mobile-footer-height - $layout-mobile-header-height
+    );
+    margin-left: 0;
+
+    &.header {
+      padding-top: $layout-mobile-header-height;
+    }
+
+    &.bottomSheet {
+      padding-bottom: $layout-bottomSheet-height;
+    }
+
+    &.full {
+      padding-top: 0;
+    }
+  }
+}
+
+.shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $z-index-quick-view-shadow;
+  width: 100%;
+  height: 100%;
+  background: rgb(0 0 0 / 20%);
+}
+
+.noScroll {
+  overflow: hidden;
+}
