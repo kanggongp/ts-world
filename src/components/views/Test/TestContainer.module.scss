@@ -1,4 +1,6 @@
 .container {
   width: 100%;
-  background: lightgoldenrodyellow;
+  display: flex;
+  flex-direction: column;
+  background: whitesmoke;
 }
