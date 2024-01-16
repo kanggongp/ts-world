@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>정사각형 표 만들기</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 200px; /* 테이블 전체 너비 */
+            height: 300px; /* 테이블 전체 높이 */
+        }
+        td {
+            width: 50px; /* 각 셀의 가로 길이 */
+            height: 50px; /* 각 셀의 세로 길이 */
+            border: 1px solid black;
+            text-align: center;
+        }
+        td:first-child {
+            border-left: 2px solid black; /* 첫 번째 열 왼쪽 테두리 */
+        }
+        td:last-child {
+            border-right: 2px solid black; /* 마지막 열 오른쪽 테두리 */
+        }
+        tr:first-child td {
+            border-top: 2px solid black; /* 첫 번째 행 위쪽 테두리 */
+        }
+        tr:last-child td {
+            border-bottom: 2px solid black; /* 마지막 행 아래쪽 테두리 */
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <tbody>
+    <tr>
+        <td>셀 1</td>
+        <td>셀 2</td>
+        <td>셀 3</td>
+        <td>셀 4</td>
+    </tr>
+    <tr>
+        <td>C</td>
+        <td>+/-</td>
+        <td>%</td>
+        <td>%</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+        <td>x</td>
+    </tr>
+    <tr>
+        <td>셀 13</td>
+        <td>셀 14</td>
+        <td>셀 15</td>
+        <td>셀 16</td>
+    </tr>
+    <tr>
+        <td>셀 17</td>
+        <td>셀 18</td>
+        <td>셀 19</td>
+        <td>셀 20</td>
+    </tr>
+    <tr>
+        <td>셀 21</td>
+        <td>셀 22</td>
+        <td>셀 23</td>
+        <td>셀 24</td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
