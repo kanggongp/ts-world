@@ -14,7 +14,7 @@ const HomeContainer = () => {
         />
       </div>
       <div className={styles.midContainer}>
-        deploy test
+        deploy test23232
       </div>
     </div>
   );
