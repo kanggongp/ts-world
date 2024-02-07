@@ -13,6 +13,9 @@ const HomeContainer = () => {
           alt={'img'}
         />
       </div>
+      <div className={styles.midContainer}>
+        mid
+      </div>
     </div>
   );
 };
