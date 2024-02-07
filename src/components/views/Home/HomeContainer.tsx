@@ -14,7 +14,7 @@ const HomeContainer = () => {
         />
       </div>
       <div className={styles.midContainer}>
-        mid2
+        mid3
       </div>
     </div>
   );
