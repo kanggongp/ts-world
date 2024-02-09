@@ -1,8 +1,9 @@
 import React, {createContext, useContext, useEffect, useState} from 'react';
 import styles from './BusinessRegistration.module.scss'
 import BusinessTerms from "@/components/views/Home/BusinessTerms/BusinessTerms";
-import {useTermsCheckBox} from "@/components/views/Home/BusinessTerms/BusinessTerms.hooks";
-import {createAsyncLocalStorage} from "next/dist/client/components/async-local-storage";
+import {useBusinessRegistration} from "@/components/views/Home/BusinessRegistration/BusinessRegistration.hooks";
+import cn from "classnames";
+import BusinessInformation from "@/components/views/Home/BusinessInformation/BusinessInformation";
 
 export const TermsContext = createContext({
   essentialCheck: false,
@@ -11,21 +12,46 @@ export const TermsContext = createContext({
 
 const BusinessRegistration = () => {
 
-  /*
-  gray 800 #424242
-  gray 900: #212121
-   */
+  const {
+    businessNumber,
+    checkNumber,
+    companyName,
+    companyOwner,
+    companyAddress,
+    detailedAddress,
+    openingDay,
+    companyType,
+    userId,
+    userPw,
+    handleBusinessNumber,
+    setCheckNumber,
+    handleState,
+  } = useBusinessRegistration()
 
+
+  // 필수 약관 체크 여부
   const [essentialCheck, setEssentialCheck] = useState(false)
 
 
   const clickFunc = () => {
-    console.log(essentialCheck)
+    console.log(companyName, companyOwner, companyAddress, detailedAddress)
+    // console.log(checkNumber)
+    // console.log(businessNumber)
+    // console.log(essentialCheck)
   }
 
   const handleEssentialCheck = () => {
     setEssentialCheck((prev) => !prev)
   }
+
+  useEffect(() => {
+    if(businessNumber === '111'){
+      setCheckNumber(true)
+    }else{
+      setCheckNumber(false)
+    }
+
+  }, [businessNumber])
 
   return (
     <TermsContext.Provider value={{essentialCheck, handleEssentialCheck}}>
@@ -41,12 +67,28 @@ const BusinessRegistration = () => {
             <input
               className={styles.numInput}
               type={'text'}
+              value={businessNumber}
+              onChange={(event) => {handleBusinessNumber(event)}}
               placeholder={'사업자 등록번호 직접입력'}
             />
+            <span className={cn(styles.alertSpan, {[styles.yes]: checkNumber})}>올바른</span>
           </div>
+          {checkNumber && (
+            <BusinessInformation
+              companyName={companyName}
+              companyOwner={companyOwner}
+              companyAddress={companyAddress}
+              detailedAddress={detailedAddress}
+              openingDay={openingDay}
+              companyType={companyType}
+              userId={userId}
+              userPw={userPw}
+              handleState={handleState}
+            />
+          )}
           {/* 약관 */}
           <BusinessTerms/>
-          <button onClick={clickFunc}>완료</button>
+          <button className={styles.btn} onClick={clickFunc}>회원가입 완료</button>
         </div>
       </div>
     </TermsContext.Provider>
