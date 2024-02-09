@@ -3,7 +3,7 @@ import styles from './CheckBox.module.scss'
 
 interface CheckBoxProps {
   checked?: boolean
-  onCheckedChange?: (checked: boolean) => void
+  onCheckedChange?: () => void
   disabled?: boolean
 }
 
@@ -13,8 +13,8 @@ const CheckBox = (props: CheckBoxProps) => {
     <input
       className={styles.checkBoxRoot}
       type={"checkbox"}
-      disabled={props.disabled}
       checked={props.checked}
+      onChange={props.onCheckedChange}
     />
   )
 }

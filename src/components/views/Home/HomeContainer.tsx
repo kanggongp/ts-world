@@ -10,6 +10,7 @@ const HomeContainer = () => {
 
   return (
     <div className={styles.container}>
+      {/* 추후 팝업 ui 추가 필요 */}
       <BusinessRegistration/>
     </div>
   );
