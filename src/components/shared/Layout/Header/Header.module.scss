@@ -1,12 +1,29 @@
 .container {
   display: flex;
-  justify-content: center;
-  align-content: center;
+  align-items: center;
   width: 100%;
-  padding: 4px;
-  background: black;
+  padding: 16px;
+  border-bottom: 1px solid #e0e0e0;
 }
 
+.title {
+  font-family: 'Noto Sanans Kr', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #3678f9;
+  margin-left: 30px;
+}
+
+.subTitle {
+  font-family: 'Noto Sanans Kr', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  margin-left: 20px;
+}
+
+
+// 예전 헤더 정보
 .content {
   display: flex;
   justify-content: space-between;

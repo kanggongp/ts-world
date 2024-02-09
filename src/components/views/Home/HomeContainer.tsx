@@ -1,21 +1,17 @@
 import styles from './HomeContainer.module.scss'
-import Image from "next/image";
+import BusinessRegistration from "@/components/views/Home/BusinessRegistration/BusinessRegistration";
 const HomeContainer = () => {
 
-  const imgSrc = 'https://gongpark-toyproject.s3.ap-northeast-2.amazonaws.com/stattoo/home/stattoo1.png'
+  /*
+  gray 700 #6c6c6f
+  gray 800 #424242
+  gray 900: #212121
+   */
 
   return (
     <div className={styles.container}>
-      <div className={styles.mainBanner}>
-        <Image
-          fill
-          src={imgSrc}
-          alt={'img'}
-        />
-      </div>
-      <div className={styles.midContainer}>
-        deploy test
-      </div>
+      {/* 추후 팝업 ui 추가 필요 */}
+      <BusinessRegistration/>
     </div>
   );
 };

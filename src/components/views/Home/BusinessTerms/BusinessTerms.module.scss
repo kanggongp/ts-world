@@ -1,0 +1,72 @@
+.container {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.termTitle {
+  font-family: 'Noto Sanans Kr', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #212121;
+}
+
+.boxDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 0.5px solid black;
+  padding: 14px 22px;
+  box-sizing: border-box;
+  margin-top: 6px;
+}
+
+.topCheckDiv {
+  width: 100%;
+  display: flex;
+  padding-bottom: 14px;
+  margin-bottom: 10px;
+  border-bottom: 0.5px solid black;;
+
+  .textDiv {
+    display: flex;
+    flex-direction: column;
+    margin-left: 6px;
+    padding-top: 4px;
+
+    .textTitle {
+      font-family: 'Noto Sanans Kr', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: #212121;
+    }
+
+    .textContent {
+      font-family: 'Noto Sanans Kr', sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      color: #6c6c6f;
+      margin-top: 10px;
+    }
+  }
+}
+
+.botCheckDiv {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+
+  .botTextTitle {
+    font-family: 'Noto Sanans Kr', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #212121;
+    margin-left: 10px;
+  }
+}
+
+.checkDiv {
+  width: 100%;
+  display: flex;
+}

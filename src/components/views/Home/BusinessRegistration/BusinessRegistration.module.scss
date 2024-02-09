@@ -1,0 +1,86 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 1300px;
+  //background: whitesmoke;
+}
+
+.title {
+  font-family: 'Noto Sanans Kr', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 20px;
+  color: #424242;
+}
+
+.registrationDiv {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.registrationNumDiv {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.numTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .numTitle {
+    font-family: 'Noto Sanans Kr', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #212121;
+  }
+
+  .noNum {
+    font-family: 'Noto Sanans Kr', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #212121;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.numInput {
+  padding: 10px;
+  margin-top: 10px;
+
+  font-family: 'Noto Sanans Kr', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #212121;
+}
+
+.alertSpan {
+  font-family: 'Noto Sanans Kr', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: red;
+  margin-top: 6px;
+
+  &.yes {
+    color: #3678f9
+  }
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  background: #3678f9;
+
+  font-family: 'Noto Sanans Kr', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+}

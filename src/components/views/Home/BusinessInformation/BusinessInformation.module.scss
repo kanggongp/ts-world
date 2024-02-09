@@ -1,0 +1,70 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.companyInfoDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2px;
+
+  .title {
+    font-family: 'Noto Sanans Kr', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #212121;
+  }
+
+  .infoInput {
+    padding: 10px;
+    margin-top: 6px;
+
+    font-family: 'Noto Sanans Kr', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #212121;
+  }
+}
+
+.companyTypeDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  .title {
+    font-family: 'Noto Sanans Kr', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #212121;
+  }
+
+  .radioDiv {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    padding: 4px 0;
+
+    .radioUnitDiv {
+      display: flex;
+      align-items: center;
+    }
+
+    .radioSpan {
+      font-family: 'Noto Sanans Kr', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: #212121;
+      margin-left: 2px;
+      color: #6c6c6f;
+    }
+  }
+
+}
