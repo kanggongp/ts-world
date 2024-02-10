@@ -25,6 +25,7 @@ const BusinessRegistration = () => {
     userId,
     userPw,
     setCheckNumber,
+    setCompanyAddress,
     handleState,
   } = useBusinessRegistration()
 
@@ -93,6 +94,7 @@ const BusinessRegistration = () => {
               companyType={companyType}
               userId={userId}
               userPw={userPw}
+              handleAddress={setCompanyAddress}
               handleState={handleState}
             />
           )}

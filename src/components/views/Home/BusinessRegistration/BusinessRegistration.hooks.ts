@@ -64,6 +64,7 @@ export const useBusinessRegistration = () => {
     userId,
     userPw,
     setCheckNumber,
+    setCompanyAddress,
     handleState,
   };
 }
