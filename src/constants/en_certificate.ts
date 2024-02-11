@@ -1,4 +1,9 @@
-export const CERTIFICATE = [
+export const EN_CERTIFICATE = [
+  {
+    title: '영어',
+    name: '자격증 선택',
+    score: [],
+  },
   {
     title: '영어',
     name: 'TOEIC',
@@ -186,7 +191,47 @@ export const CERTIFICATE = [
   },
   {
     title: '영어',
-    name: 'TOEIC Bridge',
+    name: 'BEC Vantage',
+    score: ['선택', 'grade A', 'grade B', 'grade C', 'Level B1'],
+  },
+  {
+    title: '영어',
+    name: 'WPT(Writing Proficiency Test)',
+    score: ['선택', 'S', 'AH', 'AM', 'AL', 'IH', 'IM1', 'IM2', 'IM3', 'IL', 'NH', 'NM', 'NL'],
+  },
+  {
+    title: '영어',
+    name: 'BEC Preliminary',
+    score: ['선택', 'Pass with', 'Distinction', 'Pass with Merit', 'Pass', 'Level A2'],
+  },
+  {
+    title: '영어',
+    name: 'LSAT',
     score: [],
+  },
+  {
+    title: '영어',
+    name: 'PELT standard',
+    score: [],
+  },
+  {
+    title: '영어',
+    name: '관광통역안내사 영어',
+    score: ['선택', '취득'],
+  },
+  {
+    title: '영어',
+    name: 'Cambridge Certification CPE',
+    score: ['선택', 'Grade A', 'Grade B', 'Grade C', 'Level C1'],
+  },
+  {
+    title: '영어',
+    name: 'TOSEL',
+    score: ['선택', '1급', '2급', '3급', '4급', '5급', '6급', '7급', '8급', '9급', '10급'],
+  },
+  {
+    title: '영어',
+    name: 'IET',
+    score: ['선택', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
   },
 ]
