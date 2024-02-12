@@ -51,7 +51,7 @@
       padding: 4px;
 
       &.selected {
-        background: #D4F4FA;
+        background: lightblue;
       }
     }
 
@@ -190,9 +190,65 @@
 
 
 .resultDiv {
+  position: relative;
   width: 600px;
-  height: 100px;
+  max-width: 600px;
+  padding: 12px 12px 30px 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  box-sizing: border-box;
   margin-top: 20px;
   border-radius: 10px;
   box-shadow: 0 0 15px rgb(0 0 0 / 8%);
+
+  .refreshSpan {
+    position: absolute;
+    bottom: 4px;
+    right: 12px;
+    font-family: 'Noto Sanans Kr', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    text-decoration: underline;
+    color: #414145;
+    cursor: pointer;
+  }
+}
+
+.tagDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 2px 4px 6px;
+  gap: 4px;
+  border-radius: 6px;
+  background: whitesmoke;
+
+  h1 {
+    font-family: 'Noto Sanans Kr', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #414145;
+    margin: 0;
+    padding: 0;
+  }
+
+  span {
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+
+.firstSpan {
+  font-family: 'Noto Sanans Kr', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #414145;
+}
+
+.secondSpan {
+  font-family: 'Noto Sanans Kr', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #414145;;
 }

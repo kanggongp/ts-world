@@ -3,3 +3,8 @@ export type Certification = {
   name: string
   score: string[]
 }
+
+export type ResultTag = {
+  first: string
+  second: string
+}
