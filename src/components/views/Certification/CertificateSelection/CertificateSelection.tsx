@@ -2,6 +2,7 @@ import React, {ChangeEvent} from 'react';
 import styles from "@/components/views/Certification/CertificationContainer.module.scss";
 import {Certification} from "@/types/certification";
 import {setConfig} from "next/config";
+import {numberRegex} from "@/constants/regex";
 
 interface Props {
   langTitle: string
@@ -55,7 +56,10 @@ const CertificateSelection = ({ langTitle, langScore, setScore, handleLangTitle,
             <input
               type={"text"}
               value={langScore}
-              onChange={(e) => {handleLangScore(e)}}
+              onChange={(e) => {
+                if(!numberRegex.test(e.target.value)) return
+                handleLangScore(e)
+              }}
             />
             <span>점(급) 이상</span>
           </div>

@@ -64,11 +64,18 @@
   font-family: 'Noto Sanans Kr', sans-serif;
   font-size: 12px;
   font-weight: 500;
-  color: red;
   margin-top: 6px;
+
+  &.default {
+    color: transparent;
+  }
 
   &.yes {
     color: #3678f9
+  }
+
+  &.no {
+    color: red;
   }
 }
 

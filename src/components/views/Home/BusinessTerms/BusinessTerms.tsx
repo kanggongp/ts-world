@@ -3,6 +3,7 @@ import styles from './BusinessTerms.module.scss'
 import CheckBox from "@/components/shared/CheckBox/CheckBox";
 import {useTermsCheckBox} from "@/components/views/Home/BusinessTerms/BusinessTerms.hooks";
 import {TermsContext} from "@/components/views/Home/BusinessRegistration/BusinessRegistration";
+import cn from "classnames";
 
 
 type SetStateCallback = React.Dispatch<React.SetStateAction<boolean>>;
@@ -17,12 +18,12 @@ const BusinessTerms = () => {
     essential3,
     optional1,
     optional2,
-    setAllTerms,
     setEssential1,
     setEssential2,
     setEssential3,
     setOptional1,
     setOptional2,
+    handleAllTerms,
   } = useTermsCheckBox()
 
   const handleChecked = (callback: SetStateCallback) => {
@@ -32,9 +33,9 @@ const BusinessTerms = () => {
   useEffect(() => {
 
     if(essential1 && essential2 && essential3){
-      handleEssentialCheck()
+      handleEssentialCheck(true)
     }else{
-      handleEssentialCheck()
+      handleEssentialCheck(false)
     }
 
   }, [essential1, essential2, essential3])
@@ -46,7 +47,7 @@ const BusinessTerms = () => {
       <div className={styles.boxDiv}>
         {/* 상단 체크 박스 */}
         <div className={styles.topCheckDiv}>
-          <CheckBox checked={allTerms} onCheckedChange={() => {handleChecked(setAllTerms)}}/>
+          <CheckBox checked={allTerms} onCheckedChange={() => {handleAllTerms(!allTerms)}}/>
           <div className={styles.textDiv}>
             <span className={styles.textTitle}>전체 동의</span>
             <span className={styles.textContent}>마케팅 정보 수신 동의(이메일,SMS/MMS)(선택) 동의를 포함합니다.</span>
@@ -76,14 +77,14 @@ const BusinessTerms = () => {
         </div>
         <div className={styles.botCheckDiv}>
           <CheckBox checked={optional1} onCheckedChange={() => {handleChecked(setOptional1)}}/>
-          <span className={styles.botTextTitle}>(선택) 마케팅정보 수신 동의 - 이메일</span>
+          <span className={cn(styles.botTextTitle, {[styles.optional]: true})}>(선택) 마케팅정보 수신 동의 - 이메일</span>
           <span className="material-symbols-outlined" style={{position: "absolute", top: '0', right: '0', color: 'lightgrey' }}>
             chevron_right
           </span>
         </div>
         <div className={styles.botCheckDiv}>
           <CheckBox checked={optional2} onCheckedChange={() => {handleChecked(setOptional2)}}/>
-          <span className={styles.botTextTitle}>(선택) 마케팅정보 수신 동의 - SNS/MMS</span>
+          <span className={cn(styles.botTextTitle, {[styles.optional]: true})}>(선택) 마케팅정보 수신 동의 - SNS/MMS</span>
           <span className="material-symbols-outlined" style={{position: "absolute", top: '0', right: '0', color: 'lightgrey' }}>
             chevron_right
           </span>

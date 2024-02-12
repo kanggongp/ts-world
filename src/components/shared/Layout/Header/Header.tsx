@@ -1,14 +1,30 @@
 import React from 'react';
 import styles from './Header.module.scss'
+import {useRouter} from "next/router";
 
 const Header = () => {
 
-    return (
-      <div className={styles.container}>
-        <span className={styles.title}>ainjob</span>
-        <span className={styles.subTitle}>기업 회원가입</span>
-      </div>
-    )
+  const router = useRouter()
+
+  const pushHomePage = async () => {
+    await router.push({
+      pathname: '/'
+    })
+  }
+
+  const pushCertificate = async () => {
+    await router.push({
+      pathname: '/certification'
+    })
+  }
+
+  return (
+    <div className={styles.container}>
+      <span className={styles.title} onClick={pushHomePage}>ainjob</span>
+      <span className={styles.subTitle}>기업 회원가입</span>
+      <span className={styles.rightSpan} onClick={pushCertificate}>자격증</span>
+    </div>
+  )
 
     // 예전 헤더
     // return (
