@@ -36,12 +36,11 @@ const BusinessInformation
 
   // 주소 찾기 api 실행
   const clickFunc = () => {
-    // @ts-ignore
-    new daum.Postcode({
-      oncomplete: function(data: any) {
-        handleAddress(data.address)
-      }
-    }).open();
+    // new daum.Postcode({
+    //   oncomplete: function(data: any) {
+    //     handleAddress(data.address)
+    //   }
+    // }).open();
   }
 
 
