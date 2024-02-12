@@ -35,6 +35,12 @@ const BusinessFile = ({ companyFile, noFile, setNoFile, handleFile }: Props) => 
     if (!e.target.files) return
     const file = e.target.files[0]
 
+    if (file.size > 10 * 1024 * 1024) {
+      // 파일 크기가 10MB 이상인 경우
+      alert('파일 크기는 10MB 이하여야 합니다.');
+      return;
+    }
+
     handleFile(file)
   }
 
