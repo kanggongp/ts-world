@@ -234,4 +234,139 @@ export const EN_CERTIFICATE = [
     name: 'IET',
     score: ['선택', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
   },
+  {
+    title: '영어',
+    name: 'ITT 전문번역 자격증',
+    score: ['선택', '1급', '2급'],
+  },
+  {
+    title: '영어',
+    name: 'Opic Writing',
+    score: ['선택', 'S', 'AH', 'AM', 'AL', 'IH', 'IM1', 'IM2', 'IM3', 'IL', 'NH', 'NM', 'NL'],
+  },
+  {
+    title: '영어',
+    name: 'TOED',
+    score: ['선택', '취득'],
+  },
+  {
+    title: '영어',
+    name: 'G-ETAT',
+    score: [],
+  },
+  {
+    title: '영어',
+    name: 'iB-SET',
+    score: ['선택', 'SL', 'HL'],
+  },
+  {
+    title: '영어',
+    name: 'PELT plus',
+    score: [],
+  },
+  {
+    title: '영어',
+    name: 'TESL',
+    score: ['선택', '취득'],
+  },
+  {
+    title: '영어',
+    name: 'ITT 전문통역 자격증',
+    score: ['선택', '1급', '2급'],
+  },
+  {
+    title: '영어',
+    name: 'S-ETAT2급',
+    score: ['선택', '취득'],
+  },
+  {
+    title: '영어',
+    name: 'S-TOED',
+    score: ['선택', '취득'],
+  },
+  {
+    title: '영어',
+    name: 'PELT main',
+    score: [],
+  },
+  {
+    title: '영어',
+    name: 'SLEP',
+    score: [],
+  },
+  {
+    title: '영어',
+    name: 'BEC Higher',
+    score: ['선택', 'Grade A', 'Grade B', 'Grade C', 'Level B2'],
+  },
+  {
+    title: '영어',
+    name: 'Versant',
+    score: [],
+  },
+  {
+    title: '영어',
+    name: 'ESPT-NEAT',
+    score: ['선택', '1급', '2급', '3급', '4급', '5급'],
+  },
+  {
+    title: '영어',
+    name: 'EC-TOP(TOQ)',
+    score: ['선택', '1급', '2급', '3급', '4급', '5급'],
+  },
+  {
+    title: '영어',
+    name: 'S-ETAT1급',
+    score: ['선택', '취급'],
+  },
+  {
+    title: '영어',
+    name: 'EFB',
+    score: ['선택', 'A2', 'B1', 'B2', 'C1', 'C2'],
+  },
+  {
+    title: '영어',
+    name: 'PELT kids',
+    score: [],
+  },
+  {
+    title: '영어',
+    name: 'SNULT 영어',
+    score: ['선택', '1+', '1', '2+', '2', '3+', '3', '4'],
+  },
+  {
+    title: '영어',
+    name: 'SSAT',
+    score: [],
+  },
+  {
+    title: '영어',
+    name: 'TSE',
+    score: [],
+  },
+  {
+    title: '영어',
+    name: 'Y-TOED',
+    score: ['선택', '취득'],
+  },
+  {
+    title: '영어',
+    name: 'ITT 특별통역 자격증',
+    score: ['선택', '1급', '2급'],
+  },
+  {
+    title: '영어',
+    name: 'ITT 특별번역 자격증',
+    score: ['선택', '1급', '2급'],
+  },
+  {
+    title: '영어',
+    name: 'PhonePass',
+    score: [],
+  },
+  {
+    title: '영어',
+    name: 'RISK TEST',
+    score: [],
+  },
 ]
