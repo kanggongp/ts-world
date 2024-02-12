@@ -15,7 +15,7 @@ interface Props {
 
 const CertificateSelection = ({ langTitle, langScore, setScore, handleLangTitle, handleLangScore, pushResultArr, currentLangArr }: Props) => {
 
-  const scoreArr = currentLangArr.find(item => item.name === langTitle)?.score
+  const scoreArr = currentLangArr.find(item => item.name === langTitle)?.score || []
 
   const handleScore = () => {
 
@@ -24,10 +24,6 @@ const CertificateSelection = ({ langTitle, langScore, setScore, handleLangTitle,
       return
     }
 
-    if(langScore === ''){
-      alert('중복 혹은 빈값은 등록이 불가능합니다')
-      return;
-    }
 
     pushResultArr(langTitle, langScore)
     setScore('')
@@ -64,7 +60,9 @@ const CertificateSelection = ({ langTitle, langScore, setScore, handleLangTitle,
             <span>점(급) 이상</span>
           </div>
         }
-        <button onClick={handleScore}>추가</button>
+        {langScore !== '' && (
+          <button onClick={handleScore}>추가</button>
+        )}
       </div>
     </>
   )
