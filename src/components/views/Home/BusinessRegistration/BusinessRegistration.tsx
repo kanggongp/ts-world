@@ -51,6 +51,11 @@ const BusinessRegistration = () => {
       return
     }
 
+    if(checkNumber !== 'yes'){
+      alert('사업자등록번호를 확인해 주세요!')
+      return
+    }
+
     if(!noFile){
       if(companyFile === undefined){
         alert('file check!')
