@@ -5,6 +5,8 @@ import {useBusinessRegistration} from "@/components/views/Home/BusinessRegistrat
 import cn from "classnames";
 import BusinessInformation from "@/components/views/Home/BusinessInformation/BusinessInformation";
 import BusinessFile from "@/components/views/Home/BusinessFile/BusinessFile";
+import axios from "axios";
+import {useRouter} from "next/router";
 
 export const TermsContext = createContext({
   essentialCheck: false,
@@ -26,8 +28,11 @@ const BusinessRegistration = () => {
     userPw,
     setCheckNumber,
     setCompanyAddress,
+    setCompanyType,
     handleState,
   } = useBusinessRegistration()
+
+  const router = useRouter()
 
 
   // 필수 약관 체크 여부
@@ -37,11 +42,37 @@ const BusinessRegistration = () => {
   const [companyFile, setCompanyFile] = useState<File | null>()
 
 
-  const clickFunc = () => {
-    console.log(businessNumber, companyName, companyOwner, companyAddress, detailedAddress)
-    // console.log(checkNumber)
-    // console.log(businessNumber)
-    // console.log(essentialCheck)
+  const registerFunc = async () => {
+    try {
+      const apiUrl = 'https://jsonplaceholder.typicode.com/posts';
+
+      // 보낼 데이터
+      const postData = {
+        businessNumber,
+        companyName,
+        companyOwner,
+        companyAddress,
+        detailedAddress,
+        openingDay,
+        companyType,
+        userId,
+        userPw,
+      };
+
+      const response = await axios.post(apiUrl, postData);
+
+      // API 응답 데이터
+      console.log(response.data)
+      alert('회원 가입 완료!! 자격증 등록 화면으로 이동합니다.')
+
+      await router.push({
+        pathname: '/certification'
+      })
+
+
+    } catch (error) {
+      console.error('POST 요청 중 에러 발생:', error);
+    }
   }
 
   // 약관 체크 확인
@@ -95,12 +126,13 @@ const BusinessRegistration = () => {
               userId={userId}
               userPw={userPw}
               handleAddress={setCompanyAddress}
+              handleCompanyType={setCompanyType}
               handleState={handleState}
             />
           )}
           {/* 약관 */}
           <BusinessTerms/>
-          <button className={styles.btn} onClick={clickFunc}>회원가입 완료</button>
+          <button className={styles.btn} onClick={registerFunc}>회원가입 완료</button>
         </div>
       </div>
     </TermsContext.Provider>

@@ -1,5 +1,6 @@
 import styles from './HomeContainer.module.scss'
 import BusinessRegistration from "@/components/views/Home/BusinessRegistration/BusinessRegistration";
+import TipBox from "@/components/views/Home/TipBox/TipBox";
 const HomeContainer = () => {
 
   /*
@@ -10,6 +11,7 @@ const HomeContainer = () => {
 
   return (
     <div className={styles.container}>
+      <TipBox/>
       {/* 추후 팝업 ui 추가 필요 */}
       <BusinessRegistration/>
     </div>

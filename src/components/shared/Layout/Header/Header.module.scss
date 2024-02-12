@@ -1,25 +1,40 @@
 .container {
+  position: relative;
   display: flex;
   align-items: center;
-  width: 100%;
+  //width: 100%;
   padding: 16px;
   border-bottom: 1px solid #e0e0e0;
 }
 
 .title {
+  display: block;
   font-family: 'Noto Sanans Kr', sans-serif;
   font-size: 24px;
   font-weight: 700;
   color: #3678f9;
   margin-left: 30px;
+  cursor: pointer;
 }
 
 .subTitle {
   font-family: 'Noto Sanans Kr', sans-serif;
   font-size: 16px;
   font-weight: 600;
-  color: black;
+  color: #424242;
   margin-left: 20px;
+}
+
+.rightSpan {
+  position: absolute;
+  display: block;
+  top: 24px;
+  right: 30px;
+  font-family: 'Noto Sanans Kr', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #424242;
+  cursor: pointer;
 }
 
 

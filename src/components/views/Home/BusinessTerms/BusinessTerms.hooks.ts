@@ -9,6 +9,14 @@ export const useTermsCheckBox = () => {
   const [optional1, setOptional1] = useState(false)
   const [optional2, setOptional2] = useState(false)
 
+  const handleAllTerms = (state: boolean) => {
+    setAllTerms(state)
+    setEssential1(state)
+    setEssential2(state)
+    setEssential3(state)
+    setOptional1(state)
+    setOptional2(state)
+  }
 
   return {
     allTerms,
@@ -23,5 +31,6 @@ export const useTermsCheckBox = () => {
     setEssential3,
     setOptional1,
     setOptional2,
+    handleAllTerms,
   }
 }

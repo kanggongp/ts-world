@@ -13,6 +13,7 @@ interface Props {
   userId: string
   userPw: string
   handleAddress: (data: string) => void
+  handleCompanyType: (data: string) => void
   handleState: (event: ChangeEvent<HTMLInputElement>, type: string) => void
 }
 
@@ -27,11 +28,12 @@ const BusinessInformation
        userId,
        userPw,
        handleAddress,
+       handleCompanyType,
        handleState,
      }: Props) => {
 
 
-  const [type, setType] = useState<CompanyType>('일반')
+  // const [type, setType] = useState<CompanyType>('일반')
 
 
   // 주소 찾기 api 실행
@@ -112,15 +114,15 @@ const BusinessInformation
         <span className={styles.title}>기업 구분</span>
         <div className={styles.radioDiv}>
           <div className={styles.radioUnitDiv}>
-            <RadioInput checked={type === '일반'} value={'일반'} onCheckedChange={() => {setType('일반')}}/>
+            <RadioInput checked={companyType === '일반'} value={'일반'} onCheckedChange={() => {handleCompanyType('일반')}}/>
             <span className={styles.radioSpan}>일반</span>
           </div>
           <div className={styles.radioUnitDiv}>
-            <RadioInput checked={type === '헤드헌터'} value={'헤드헌터'} onCheckedChange={() => {setType('헤드헌터')}}/>
+            <RadioInput checked={companyType === '헤드헌터'} value={'헤드헌터'} onCheckedChange={() => {handleCompanyType('헤드헌터')}}/>
             <span className={styles.radioSpan}>헤드헌터</span>
           </div>
           <div className={styles.radioUnitDiv}>
-            <RadioInput checked={type === '파견/도급/채용대행'} value={'파견/도급/채용대행'} onCheckedChange={() => {setType('파견/도급/채용대행')}}/>
+            <RadioInput checked={companyType === '파견/도급/채용대행'} value={'파견/도급/채용대행'} onCheckedChange={() => {handleCompanyType('파견/도급/채용대행')}}/>
             <span className={styles.radioSpan}>파견/도급/채용대행</span>
           </div>
         </div>
