@@ -12,6 +12,7 @@ interface Props {
   companyType: string
   userId: string
   userPw: string
+  handleAddress: (data: string) => void
   handleState: (event: ChangeEvent<HTMLInputElement>, type: string) => void
 }
 
@@ -25,11 +26,23 @@ const BusinessInformation
        companyType,
        userId,
        userPw,
+       handleAddress,
        handleState,
      }: Props) => {
 
 
   const [type, setType] = useState<CompanyType>('일반')
+
+
+  // 주소 찾기 api 실행
+  const clickFunc = () => {
+    // @ts-ignore
+    new daum.Postcode({
+      oncomplete: function(data: any) {
+        handleAddress(data.address)
+      }
+    }).open();
+  }
 
 
   return (
@@ -67,9 +80,8 @@ const BusinessInformation
           type={"text"}
           className={styles.infoInput}
           value={companyAddress}
-          onChange={(e) => {
-            handleState(e, 'companyAddress')
-          }}
+          onClick={clickFunc}
+          onChange={() => {console.log('주소 api 실행')}}
           placeholder={'주소 찾기'}
         />
         <input

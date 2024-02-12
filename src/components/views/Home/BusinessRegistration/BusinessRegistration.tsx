@@ -4,6 +4,7 @@ import BusinessTerms from "@/components/views/Home/BusinessTerms/BusinessTerms";
 import {useBusinessRegistration} from "@/components/views/Home/BusinessRegistration/BusinessRegistration.hooks";
 import cn from "classnames";
 import BusinessInformation from "@/components/views/Home/BusinessInformation/BusinessInformation";
+import BusinessFile from "@/components/views/Home/BusinessFile/BusinessFile";
 
 export const TermsContext = createContext({
   essentialCheck: false,
@@ -23,8 +24,8 @@ const BusinessRegistration = () => {
     companyType,
     userId,
     userPw,
-    handleBusinessNumber,
     setCheckNumber,
+    setCompanyAddress,
     handleState,
   } = useBusinessRegistration()
 
@@ -32,18 +33,23 @@ const BusinessRegistration = () => {
   // 필수 약관 체크 여부
   const [essentialCheck, setEssentialCheck] = useState(false)
 
+  // 첨부 파일
+  const [companyFile, setCompanyFile] = useState<File | null>()
+
 
   const clickFunc = () => {
-    console.log(companyName, companyOwner, companyAddress, detailedAddress)
+    console.log(businessNumber, companyName, companyOwner, companyAddress, detailedAddress)
     // console.log(checkNumber)
     // console.log(businessNumber)
     // console.log(essentialCheck)
   }
 
+  // 약관 체크 확인
   const handleEssentialCheck = () => {
     setEssentialCheck((prev) => !prev)
   }
 
+  // 사업자 번호 확인
   useEffect(() => {
     if(businessNumber === '111'){
       setCheckNumber(true)
@@ -68,11 +74,16 @@ const BusinessRegistration = () => {
               className={styles.numInput}
               type={'text'}
               value={businessNumber}
-              onChange={(event) => {handleBusinessNumber(event)}}
+              onChange={(event) => {handleState(event, 'businessNumber')}}
               placeholder={'사업자 등록번호 직접입력'}
             />
             <span className={cn(styles.alertSpan, {[styles.yes]: checkNumber})}>올바른</span>
           </div>
+          {/* 사업자 등록 파일 */}
+          <BusinessFile
+            companyFile={companyFile}
+            handleFile={setCompanyFile}
+          />
           {checkNumber && (
             <BusinessInformation
               companyName={companyName}
@@ -83,6 +94,7 @@ const BusinessRegistration = () => {
               companyType={companyType}
               userId={userId}
               userPw={userPw}
+              handleAddress={setCompanyAddress}
               handleState={handleState}
             />
           )}

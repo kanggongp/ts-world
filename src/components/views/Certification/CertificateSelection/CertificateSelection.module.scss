@@ -1,0 +1,61 @@
+.selectValueDiv {
+  padding: 10px 20px 10px 20px;
+  box-sizing: border-box;
+
+  .langSelect {
+    width: 100%;
+    padding: 4px;
+    max-height: 400px;
+    overflow-y: auto;
+    margin-top: 10px;
+  }
+}
+
+.selectBotDiv {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  padding: 10px 20px 10px 20px;
+  margin-top: 20px;
+
+  .botSelect {
+    width: 70%;
+    padding: 4px;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+
+  button {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    margin-left: 20px;
+    cursor: pointer;
+    background: #3678f9;
+
+    font-family: 'Noto Sanans Kr', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+  }
+
+  .botInputDiv {
+    width: 70%;
+    display: flex;
+    align-items: center;
+
+    input{
+      flex: 1;
+      padding: 4px;
+    }
+
+    span {
+      font-family: 'Noto Sanans Kr', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: #414145;;
+      margin-left: 6px;
+    }
+  }
+}

@@ -14,17 +14,14 @@ export const useBusinessRegistration = () => {
   const [userId, setUserId] = useState('')
   const [userPw, setUserPw] = useState('')
 
-  const handleBusinessNumber = (event: ChangeEvent<HTMLInputElement>) => {
-
-    const prevData = event.target.value
-
-    setBusinessNumber(prevData)
-  }
 
   const handleState = (event: ChangeEvent<HTMLInputElement>, type: string) => {
     const prevData = event.target.value
 
     switch (type) {
+      case 'businessNumber':
+        setBusinessNumber(prevData)
+        break;
       case 'companyName':
         setCompanyName(prevData)
         break;
@@ -66,8 +63,8 @@ export const useBusinessRegistration = () => {
     companyType,
     userId,
     userPw,
-    handleBusinessNumber,
     setCheckNumber,
+    setCompanyAddress,
     handleState,
   };
 }
