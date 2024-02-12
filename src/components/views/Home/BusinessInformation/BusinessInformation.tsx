@@ -144,7 +144,7 @@ const BusinessInformation
       <div className={styles.companyInfoDiv}>
         <span className={styles.title}>패스워드</span>
         <input
-          type={"text"}
+          type={"password"}
           className={styles.infoInput}
           value={userPw}
           onChange={(e) => {

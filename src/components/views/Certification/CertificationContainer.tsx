@@ -14,9 +14,12 @@ import {RU_CERTIFICATE} from "@/constants/ru_certificate";
 import {IT_CERTIFICATE} from "@/constants/it_certificate";
 import {KR_CERTIFICATE} from "@/constants/kr_certificate";
 import {ETC_CERTIFICATE} from "@/constants/etc_certificate";
+import {useRouter} from "next/router";
 
 
 const CertificationContainer = () => {
+
+  const router = useRouter()
 
   const [langSelected, setLangSelected] = useState(false)
   const [currentLang, setCurrentLang] = useState('')
@@ -77,11 +80,7 @@ const CertificationContainer = () => {
   };
 
   const refreshResultArr = () => {
-
-    setResultArr([])
-    setLevel('')
-    setLangTitle('')
-    setLangScore('')
+    router.reload()
   }
 
   // 언어 중복 등록했는지 검사하는 함수

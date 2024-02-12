@@ -5,14 +5,16 @@ import CheckBox from "@/components/shared/CheckBox/CheckBox";
 
 interface Props {
   companyFile: File | null| undefined
+  noFile: boolean
+  setNoFile: (state: boolean) => void
   handleFile: (data: File | null) => void
 }
 
-const BusinessFile = ({ companyFile, handleFile }: Props) => {
+const BusinessFile = ({ companyFile, noFile, setNoFile, handleFile }: Props) => {
 
   const fileInputRef = useRef(null)
 
-  const [noFile, setNoFile] = useState(false)
+  // const [noFile, setNoFile] = useState(false)
 
   const inputId = 'jobFileId'
 
@@ -25,7 +27,8 @@ const BusinessFile = ({ companyFile, handleFile }: Props) => {
       handleFile(null)
     }
 
-    setNoFile((prev) => !prev )
+    setNoFile(!noFile)
+    // setNoFile((prev) => !prev )
   }
 
   const handleFileInput = (e: ChangeEvent<HTMLInputElement>) => {

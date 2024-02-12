@@ -4,13 +4,14 @@ import {set} from "immutable";
 export const useBusinessRegistration = () => {
 
   const [businessNumber, setBusinessNumber] = useState<string>('')
-  const [checkNumber, setCheckNumber] = useState(false)
+  const [checkNumber, setCheckNumber] = useState('')
   const [companyName, setCompanyName] = useState('')
   const [companyOwner, setCompanyOwner] = useState('')
   const [companyAddress, setCompanyAddress] = useState('')
   const [detailedAddress, setDetailedAddress] = useState('')
   const [openingDay, setOpeningDay] = useState('')
   const [companyType, setCompanyType] = useState('')
+  const [noFile, setNoFile] = useState(false)
   const [userId, setUserId] = useState('')
   const [userPw, setUserPw] = useState('')
 
@@ -61,11 +62,13 @@ export const useBusinessRegistration = () => {
     detailedAddress,
     openingDay,
     companyType,
+    noFile,
     userId,
     userPw,
     setCheckNumber,
     setCompanyAddress,
     setCompanyType,
+    setNoFile,
     handleState,
   };
 }

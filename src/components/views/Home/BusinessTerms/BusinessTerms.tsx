@@ -33,9 +33,9 @@ const BusinessTerms = () => {
   useEffect(() => {
 
     if(essential1 && essential2 && essential3){
-      handleEssentialCheck()
+      handleEssentialCheck(true)
     }else{
-      handleEssentialCheck()
+      handleEssentialCheck(false)
     }
 
   }, [essential1, essential2, essential3])
