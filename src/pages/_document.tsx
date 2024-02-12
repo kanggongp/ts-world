@@ -14,7 +14,7 @@ export default function Document() {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
           />
-        {/*<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>*/}
+        <script async src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"/>
       </Head>
       <body>
         <Main />
