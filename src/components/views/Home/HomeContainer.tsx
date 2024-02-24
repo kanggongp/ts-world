@@ -1,8 +1,7 @@
-import styles from './HomeContainer.module.scss'
-import BusinessRegistration from "@/components/views/Home/BusinessRegistration/BusinessRegistration";
-import TipBox from "@/components/views/Home/TipBox/TipBox";
+import styles from './HomeContainer.module.scss';
+import BusinessRegistration from '@/components/views/Home/BusinessRegistration/BusinessRegistration';
+import TipBox from '@/components/views/Home/TipBox/TipBox';
 const HomeContainer = () => {
-
   /*
   gray 700 #6c6c6f
   gray 800 #424242
@@ -11,9 +10,9 @@ const HomeContainer = () => {
 
   return (
     <div className={styles.container}>
-      <TipBox/>
+      <TipBox />
       {/* 추후 팝업 ui 추가 필요 */}
-      <BusinessRegistration/>
+      <BusinessRegistration />
     </div>
   );
 };
